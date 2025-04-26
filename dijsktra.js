@@ -1,28 +1,25 @@
 function dijkstra(graph, startNode, endNode) {
     const distances = {};
     const previous = {};
-    const queue = new Set(graph.nodes);
+    const visited = new Set();
+    const queue = [];
   
-    // Başlangıç düğümleri ve mesafeleri ayarla
     graph.nodes.forEach(node => {
       distances[node] = Infinity;
       previous[node] = null;
     });
+  
     distances[startNode] = 0;
+    queue.push({ node: startNode, distance: 0 });
   
-    while (queue.size > 0) {
-      // En küçük mesafeye sahip düğümü bul
-      let currentNode = null;
-      queue.forEach(node => {
-        if (currentNode === null || distances[node] < distances[currentNode]) {
-          currentNode = node;
-        }
-      });
+    while (queue.length > 0) {
+      queue.sort((a, b) => a.distance - b.distance);
+      const { node: currentNode } = queue.shift();
   
-      // Eğer hedef düğüme ulaşıldıysa, çık
+      if (visited.has(currentNode)) continue;
+      visited.add(currentNode);
+  
       if (currentNode === endNode) break;
-  
-      queue.delete(currentNode);
   
       const neighbors = graph.edges[currentNode] || [];
       neighbors.forEach(neighbor => {
@@ -30,14 +27,14 @@ function dijkstra(graph, startNode, endNode) {
         if (alt < distances[neighbor.node]) {
           distances[neighbor.node] = alt;
           previous[neighbor.node] = currentNode;
+          queue.push({ node: neighbor.node, distance: alt });
         }
       });
     }
   
-    // En kısa yolu ve toplam mesafeyi oluştur
     const path = [];
     let current = endNode;
-    while (current !== null) {
+    while (current) {
       path.unshift(current);
       current = previous[current];
     }
