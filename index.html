@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Smart Route Finder</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" />
+  <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"></script>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    h1 {
+      margin: 20px 0 10px 0;
+    }
+
+    #map {
+      height: 500px;
+      width: 90%;
+      max-width: 1000px;
+      margin-bottom: 20px;
+      border: 2px solid #333;
+      border-radius: 8px;
+    }
+
+    #info {
+      width: 90%;
+      max-width: 1000px;
+      background: #f9f9f9;
+      padding: 10px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    #info p {
+      margin: 5px 0;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Smart Route Finder</h1>
+  <div id="map"></div>
+
+  <div id="info">
+    <p><strong>Start:</strong> <span id="start-node">None</span></p>
+    <p><strong>End:</strong> <span id="end-node">None</span></p>
+    <p><strong>Distance:</strong> <span id="distance">0</span></p>
+  </div>
+
+  <script src="graph-data.json" type="application/json"></script>
+  <script src="dijkstra.js"></script>
+  <script src="script.js"></script>
+
+</body>
+</html>
