@@ -75,8 +75,6 @@ function addMarkers() {
 function drawGraphEdges() {
   const edges = graphData.edges;
   const coords = graphData.coordinates;
-  const colors = ['red', 'blue', 'green', 'purple', 'orange', 'darkcyan', 'magenta', 'gold'];
-  let colorIndex = 0;
 
   for (const fromNode in edges) {
     edges[fromNode].forEach(edge => {
@@ -87,12 +85,10 @@ function drawGraphEdges() {
 
       if (fromCoord && toCoord) {
         L.polyline([fromCoord, toCoord], {
-          color: colors[colorIndex % colors.length],
-          weight: 3,
-          opacity: 0.8
+          color: 'blue',
+          weight: 2,
+          opacity: 0.6
         }).addTo(map);
-
-        colorIndex++;
       }
     });
   }
@@ -137,7 +133,14 @@ function calculateAndDrawPath() {
     map.removeLayer(pathLine);
   }
 
-  pathLine = L.polyline(latlngs, { color: 'blue', weight: 4 }).addTo(map);
+  pathLine = L.polyline(latlngs, { 
+    color: 'red',     // Changed from blue to red
+    weight: 4,
+    opacity: 0.8      // Slightly increased opacity for better visibility
+  }).addTo(map);
+  
+  // Bring the path line to the front to make it more visible
+  pathLine.bringToFront();
 }
 
 function resetSelection() {
