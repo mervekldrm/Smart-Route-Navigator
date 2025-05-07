@@ -1,35 +1,540 @@
 {
-  "nodes": ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N"],
+  "nodes": [
+    "İzmir",
+    "Manisa",
+    "Aydın",
+    "Denizli",
+    "Muğla",
+    "Isparta",
+    "Antalya",
+    "Adana",
+    "Adıyaman",
+    "Afyonkarahisar",
+    "Ağrı",
+    "Aksaray",
+    "Amasya",
+    "Ankara",
+    "Ardahan",
+    "Artvin",
+    "Balıkesir",
+    "Bartın",
+    "Batman",
+    "Bayburt",
+    "Bilecik",
+    "Bingöl",
+    "Bitlis",
+    "Bolu",
+    "Burdur",
+    "Bursa",
+    "Çanakkale",
+    "Çankırı",
+    "Çorum",
+    "Diyarbakır",
+    "Düzce",
+    "Edirne",
+    "Elazığ",
+    "Erzincan",
+    "Erzurum",
+    "Eskişehir",
+    "Gaziantep",
+    "Giresun",
+    "Gümüşhane",
+    "Hakkari",
+    "Hatay",
+    "Iğdır",
+    "İstanbul",
+    "Kahramanmaraş",
+    "Karabük",
+    "Karaman",
+    "Kars",
+    "Kastamonu",
+    "Kayseri",
+    "Kırıkkale",
+    "Kırklareli",
+    "Kırşehir",
+    "Kilis",
+    "Kocaeli",
+    "Konya",
+    "Kütahya",
+    "Malatya",
+    "Mardin",
+    "Mersin",
+    "Muş",
+    "Nevşehir",
+    "Niğde",
+    "Ordu",
+    "Osmaniye",
+    "Rize",
+    "Sakarya",
+    "Samsun",
+    "Siirt",
+    "Sinop",
+    "Sivas",
+    "Şanlıurfa",
+    "Şırnak",
+    "Tekirdağ",
+    "Tokat",
+    "Trabzon",
+    "Tunceli",
+    "Uşak",
+    "Van",
+    "Yalova",
+    "Yozgat",
+    "Zonguldak",
+    "Ula",
+    "Yatağan",
+    "Çine",
+    "Marmaris",
+    "Yeniköy",
+    "Kütüphane"
+  ],
   "edges": {
-    "A": [{"node": "B", "weight": 1115.7}, {"node": "C", "weight": 3084.4}, {"node": "H", "weight": 1250.3}],
-    "B": [{"node": "C", "weight": 1257.2}, {"node": "D", "weight": 778.3}, {"node": "E", "weight": 894.4}],
-    "C": [{"node": "D", "weight": 1057.6}, {"node": "F", "weight": 1121.1}, {"node": "I", "weight": 1375.8}],
-    "D": [{"node": "G", "weight": 1751.8}, {"node": "J", "weight": 922.4}],
-    "E": [{"node": "F", "weight": 1431.2}, {"node": "K", "weight": 1087.6}],
-    "F": [{"node": "G", "weight": 2117.3}, {"node": "L", "weight": 831.9}],
-    "G": [{"node": "N", "weight": 1642.5}],
-    "H": [{"node": "I", "weight": 874.2}, {"node": "K", "weight": 1325.7}],
-    "I": [{"node": "J", "weight": 765.3}, {"node": "M", "weight": 1431.8}],
-    "J": [{"node": "L", "weight": 1128.5}],
-    "K": [{"node": "L", "weight": 952.6}, {"node": "M", "weight": 1087.3}],
-    "L": [{"node": "N", "weight": 1235.8}],
-    "M": [{"node": "N", "weight": 867.2}],
-    "N": []
+    "İzmir": [],
+    "Manisa": [],
+    "Aydın": [],
+    "Denizli": [
+      {
+        "node": "Yatağan",
+        "weight": 201140.1
+      }
+    ],
+    "Muğla": [],
+    "Isparta": [],
+    "Antalya": [],
+    "Adana": [],
+    "Adıyaman": [],
+    "Afyonkarahisar": [],
+    "Ağrı": [],
+    "Aksaray": [],
+    "Amasya": [],
+    "Ankara": [],
+    "Ardahan": [],
+    "Artvin": [],
+    "Balıkesir": [],
+    "Bartın": [],
+    "Batman": [],
+    "Bayburt": [],
+    "Bilecik": [],
+    "Bingöl": [],
+    "Bitlis": [],
+    "Bolu": [],
+    "Burdur": [],
+    "Bursa": [],
+    "Çanakkale": [],
+    "Çankırı": [],
+    "Çorum": [],
+    "Diyarbakır": [],
+    "Düzce": [],
+    "Edirne": [],
+    "Elazığ": [],
+    "Erzincan": [],
+    "Erzurum": [],
+    "Eskişehir": [],
+    "Gaziantep": [],
+    "Giresun": [],
+    "Gümüşhane": [],
+    "Hakkari": [],
+    "Hatay": [],
+    "Iğdır": [],
+    "İstanbul": [],
+    "Kahramanmaraş": [],
+    "Karabük": [],
+    "Karaman": [],
+    "Kars": [],
+    "Kastamonu": [],
+    "Kayseri": [],
+    "Kırıkkale": [],
+    "Kırklareli": [],
+    "Kırşehir": [],
+    "Kilis": [],
+    "Kocaeli": [],
+    "Konya": [],
+    "Kütahya": [],
+    "Malatya": [],
+    "Mardin": [],
+    "Mersin": [],
+    "Muş": [],
+    "Nevşehir": [],
+    "Niğde": [],
+    "Ordu": [],
+    "Osmaniye": [],
+    "Rize": [],
+    "Sakarya": [],
+    "Samsun": [],
+    "Siirt": [],
+    "Sinop": [],
+    "Sivas": [],
+    "Şanlıurfa": [],
+    "Şırnak": [],
+    "Tekirdağ": [],
+    "Tokat": [],
+    "Trabzon": [],
+    "Tunceli": [],
+    "Uşak": [],
+    "Van": [],
+    "Yalova": [],
+    "Yozgat": [],
+    "Zonguldak": [],
+    "Ula": [],
+    "Yatağan": [
+      {
+        "node": "Denizli",
+        "weight": 201140.1
+      }
+    ],
+    "Çine": [],
+    "Marmaris": [],
+    "Yeniköy": [],
+    "Kütüphane": []
   },
   "coordinates": {
-    "A": [51.505, -0.09],
-    "B": [51.51, -0.1],
-    "C": [51.52, -0.12],
-    "D": [51.515, -0.13],
-    "E": [51.508, -0.08],
-    "F": [51.519, -0.11],
-    "G": [51.517, -0.14],
-    "H": [51.502, -0.07],
-    "I": [51.523, -0.09],
-    "J": [51.518, -0.15],
-    "K": [51.498, -0.05],
-    "L": [51.527, -0.12],
-    "M": [51.507, -0.03],
-    "N": [51.525, -0.16]
+    "İzmir": [
+      38.4196,
+      27.1372
+    ],
+    "Manisa": [
+      38.5829,
+      27.4448
+    ],
+    "Aydın": [
+      37.8148,
+      27.8732
+    ],
+    "Denizli": [
+      37.8322,
+      29.1198
+    ],
+    "Muğla": [
+      37.1788,
+      28.3729
+    ],
+    "Isparta": [
+      37.7773,
+      30.5423
+    ],
+    "Antalya": [
+      36.9258,
+      30.6742
+    ],
+    "Adana": [
+      37,
+      35.3213
+    ],
+    "Adıyaman": [
+      37.7648,
+      38.2786
+    ],
+    "Afyonkarahisar": [
+      38.7507,
+      30.5567
+    ],
+    "Ağrı": [
+      39.7191,
+      43.0503
+    ],
+    "Aksaray": [
+      38.3687,
+      33.9924
+    ],
+    "Amasya": [
+      40.6499,
+      35.8353
+    ],
+    "Ankara": [
+      39.9208,
+      32.8541
+    ],
+    "Ardahan": [
+      41.1105,
+      42.7022
+    ],
+    "Artvin": [
+      41.1828,
+      41.8183
+    ],
+    "Balıkesir": [
+      39.6484,
+      27.8826
+    ],
+    "Bartın": [
+      41.6344,
+      32.3375
+    ],
+    "Batman": [
+      37.8812,
+      41.1351
+    ],
+    "Bayburt": [
+      40.2552,
+      40.2249
+    ],
+    "Bilecik": [
+      40.1506,
+      29.9792
+    ],
+    "Bingöl": [
+      39.0626,
+      40.7696
+    ],
+    "Bitlis": [
+      38.4006,
+      42.1093
+    ],
+    "Bolu": [
+      40.7351,
+      31.6082
+    ],
+    "Burdur": [
+      37.7212,
+      30.2936
+    ],
+    "Bursa": [
+      40.1885,
+      29.061
+    ],
+    "Çanakkale": [
+      40.1553,
+      26.4142
+    ],
+    "Çankırı": [
+      40.6013,
+      33.6134
+    ],
+    "Çorum": [
+      40.5489,
+      34.9537
+    ],
+    "Diyarbakır": [
+      37.9144,
+      40.2306
+    ],
+    "Düzce": [
+      40.8438,
+      31.1565
+    ],
+    "Edirne": [
+      41.6818,
+      26.5623
+    ],
+    "Elazığ": [
+      38.681,
+      39.2264
+    ],
+    "Erzincan": [
+      39.75,
+      39.5
+    ],
+    "Erzurum": [
+      39.9,
+      41.27
+    ],
+    "Eskişehir": [
+      39.7667,
+      30.525
+    ],
+    "Gaziantep": [
+      37.0662,
+      37.3833
+    ],
+    "Giresun": [
+      40.9128,
+      38.3895
+    ],
+    "Gümüşhane": [
+      40.4603,
+      39.4816
+    ],
+    "Hakkari": [
+      37.5742,
+      43.7408
+    ],
+    "Hatay": [
+      36.2025,
+      36.1606
+    ],
+    "Iğdır": [
+      39.9167,
+      44.0333
+    ],
+    "İstanbul": [
+      41.0082,
+      28.9784
+    ],
+    "Kahramanmaraş": [
+      37.5753,
+      36.9228
+    ],
+    "Karabük": [
+      41.2061,
+      32.6204
+    ],
+    "Karaman": [
+      37.1759,
+      33.2287
+    ],
+    "Kars": [
+      40.6013,
+      43.0975
+    ],
+    "Kastamonu": [
+      41.3887,
+      33.7827
+    ],
+    "Kayseri": [
+      38.7205,
+      35.4826
+    ],
+    "Kırıkkale": [
+      39.8453,
+      33.5151
+    ],
+    "Kırklareli": [
+      41.7333,
+      27.2167
+    ],
+    "Kırşehir": [
+      39.1425,
+      34.1709
+    ],
+    "Kilis": [
+      36.7184,
+      37.1212
+    ],
+    "Kocaeli": [
+      40.8532,
+      29.8815
+    ],
+    "Konya": [
+      37.8715,
+      32.4957
+    ],
+    "Kütahya": [
+      39.4167,
+      29.9833
+    ],
+    "Malatya": [
+      38.3552,
+      38.3095
+    ],
+    "Mardin": [
+      37.3212,
+      40.7245
+    ],
+    "Mersin": [
+      36.8,
+      34.6333
+    ],
+    "Muş": [
+      38.7432,
+      41.4917
+    ],
+    "Nevşehir": [
+      38.6242,
+      34.7244
+    ],
+    "Niğde": [
+      37.9667,
+      34.6833
+    ],
+    "Ordu": [
+      40.9839,
+      37.8764
+    ],
+    "Osmaniye": [
+      37.0742,
+      36.247
+    ],
+    "Rize": [
+      41.0201,
+      40.5234
+    ],
+    "Sakarya": [
+      40.7731,
+      30.3943
+    ],
+    "Samsun": [
+      41.2867,
+      36.33
+    ],
+    "Siirt": [
+      37.9333,
+      41.95
+    ],
+    "Sinop": [
+      42.0295,
+      35.1513
+    ],
+    "Sivas": [
+      39.7477,
+      37.0179
+    ],
+    "Şanlıurfa": [
+      37.1674,
+      38.7955
+    ],
+    "Şırnak": [
+      37.5164,
+      42.4611
+    ],
+    "Tekirdağ": [
+      40.9781,
+      27.5126
+    ],
+    "Tokat": [
+      40.3167,
+      36.5542
+    ],
+    "Trabzon": [
+      41.0053,
+      39.7267
+    ],
+    "Tunceli": [
+      39.1052,
+      39.5477
+    ],
+    "Uşak": [
+      38.6742,
+      29.4059
+    ],
+    "Van": [
+      38.4938,
+      43.383
+    ],
+    "Yalova": [
+      40.655,
+      29.284
+    ],
+    "Yozgat": [
+      39.8181,
+      34.8148
+    ],
+    "Zonguldak": [
+      41.4525,
+      31.7894
+    ],
+    "Ula": [
+      37.10281462398881,
+      28.416504425245606
+    ],
+    "Yatağan": [
+      37.339674738408185,
+      28.14083999804898
+    ],
+    "Çine": [
+      37.60784897687899,
+      28.057880096386647
+    ],
+    "Marmaris": [
+      36.8474571717587,
+      28.270880894494383
+    ],
+    "Yeniköy": [
+      37.16592449844314,
+      28.402711445848016
+    ],
+    "Kütüphane": [
+      37.16326865859802,
+      28.372187879199704
+    ]
   }
 }
